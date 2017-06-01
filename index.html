@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>World Wide Travel Guide - Modern Framework</title>
+</head>
+
+<body ng-app="PeteTourGuide">
+    <h2 style="text-align:center;">World Wide Tour Guide</h2>
+    <div ng-view>
+    </div>
+    <div ng-controller="GuideController">
+        <div ng-repeat="book in guides">
+            <h4>{{book.title}}</h4>
+            <p>{{book.type}}</p>
+            <p>{{book.price}}</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/node_modules/firebase/firebase.js"></script>
+    <script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/bookCtrl.js"></script>
+    <script src="app/factory/guideFactory.js"></script>
+</body>
+
+</html>
