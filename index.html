@@ -7,15 +7,15 @@
 
 <body ng-app="PeteTourGuide">
     <h2 style="text-align:center;">World Wide Tour Guide</h2>
+
     <div ng-view>
     </div>
-    <div ng-controller="GuideController">
-        <div ng-repeat="book in guides">
-            <h4>{{book.title}}</h4>
-            <p>{{book.type}}</p>
-            <p>{{book.price}}</p>
-        </div>
-    </div>
+
+    <!-- <div ng-controller="GuideController"> -->
+	<!--Removed this ^ bc Angular-route will now handle binding controllers to partials -->
+
+
+
     <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="lib/node_modules/firebase/firebase.js"></script>
     <script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>

@@ -1,0 +1,8 @@
+
+Search By Title:
+    	<input type="text" placeholder="Enter Region" ng-model="value">
+        <div ng-repeat="book in guides | filter: {title:value}">
+            <h4>{{book.title}}</h4>
+            <p>{{book.type}}</p>
+            <p>{{book.price}}</p>
+        </div>
